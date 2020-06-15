@@ -23,12 +23,16 @@ type (
 )
 
 const (
-	// Routes type/
+	// RouteInvalid invalid route.
 	RouteInvalid Route = "invalid"
-	RouteNorth   Route = "north"
-	RouteSouth   Route = "south"
-	RouteEast    Route = "east"
-	RouteWest    Route = "west"
+	// RouteNorth north route.
+	RouteNorth Route = "north"
+	// RouteSouth south route.
+	RouteSouth Route = "south"
+	// RouteEast east route.
+	RouteEast Route = "east"
+	// RouteWest west route.
+	RouteWest Route = "west"
 )
 
 // getRandomRouteAndCity get a random city with route.

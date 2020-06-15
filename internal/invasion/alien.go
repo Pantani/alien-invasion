@@ -20,15 +20,16 @@ type (
 )
 
 const (
-	// Alien status.
+	// AlienStatusLive status live.
 	AlienStatusLive AlienStatus = "live"
+	// AlienStatusDead status dead.
 	AlienStatusDead AlienStatus = "dead"
 )
 
 // newAlien creates a new Alien object
 // It returns an Alien object.
 func newAlien(number uint, city string) *Alien {
-	// Generate a random name for Alien.
+	// generate a random name for Alien.
 	nameGenerator := namegenerator.NewNameGenerator(int64(number))
 	return &Alien{
 		Number: number,
