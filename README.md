@@ -11,7 +11,9 @@ Mad​ ​aliens​ ​are​ ​about​ ​to​ ​invade​ ​the​ ​ear
 ### From Source
 
 ```shell
-make start
+$ make start
+// OR
+$ go run main.go
 ```
 
 ### Docker
@@ -19,7 +21,7 @@ make start
 Build and run from local Dockerfile:
 
 ```shell
-docker-compose up
+$ docker-compose up
 ```
 
 ## Arguments
@@ -43,11 +45,13 @@ $ go run main.go -w test/world_2.txt -a 2 -i 10
 $ go run main.go -a 20 -i 1000
 ```
 
+All test files are located inside the `test` folder.
+
 ## Useful Commands
 
 ### Unit tests
 ```shell
-make test
+$ make test
 ```
 
 ### Help
@@ -58,9 +62,9 @@ $ make help
  Choose a command run in alien-invasion:
 
   install            Install missing dependencies. Runs `go get` internally. e.g; make install get=github.com/foo/bar
-  start              Start all applications in development mode.
-  start-simulation   Start alian simulation.
-  stop               Stop development mode.
+  start              Clean, compile and start simulation.
+  start-simulation   Start alian simulation from binary.
+  stop               Stop the simulation.
   compile            Compile the project.
   exec               Run given command. e.g; make exec run="go test ./..."
   clean              Clean build files. Runs `go clean` internally.

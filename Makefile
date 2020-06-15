@@ -30,18 +30,18 @@ MAKEFLAGS += --silent
 ## install: Install missing dependencies. Runs `go get` internally. e.g; make install get=github.com/foo/bar
 install: go-get
 
-## start: Start all applications in development mode.
+## start: Clean, compile and start simulation.
 start:
 	@bash -c "$(MAKE) clean compile start-simulation"
 
-## start-simulation: Start alian simulation.
+## start-simulation: Start alian simulation from binary.
 start-simulation: stop
 	@echo "  >  Starting $(PROJECT_NAME)"
 	@-$(GOBIN)/$(PROJECT_NAME) 2>&1 & echo $$! > $(PID_START)
 	@cat $(PID_START) | sed "/^/s/^/  \>  API PID: /"
 	@echo "  >  Error log: $(STDERR)"
 
-## stop: Stop development mode.
+## stop: Stop the simulation.
 stop:
 	@-touch $(PID_START)
 	@-kill `cat $(PID_START)` 2> /dev/null || true

@@ -74,7 +74,7 @@ func (p *Path) hasPath() bool {
 	return len(*p) > 0
 }
 
-// HasMovement verify the city have possible movements.
+// hasMovement verify the city have possible movements.
 func (c *City) hasMovement() bool {
 	if c.North.hasPath() {
 		return true
