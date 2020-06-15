@@ -105,7 +105,7 @@ func newCity(row string) (*City, error) {
 	for i := 1; i < len(s); i++ {
 		text := s[i]
 		path := strings.Split(text, "=")
-		if len(path) < 1 {
+		if len(path) <= 1 {
 			return nil, errors.E("invalid path for city", errors.Params{"row": row, "path": text})
 		}
 		switch strings.ToLower(path[0]) {
