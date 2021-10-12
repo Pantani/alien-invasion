@@ -6,7 +6,7 @@ Mad​ ​aliens​ ​are​ ​about​ ​to​ ​invade​ ​the​ ​ear
 
 ### Requirements
 
- * [Go Toolchain](https://golang.org/doc/install) versions 1.14+
+ * [Go Toolchain](https://golang.org/doc/install) versions 1.16+
 
 ### From Source
 
