@@ -11,7 +11,7 @@ Mad​ ​aliens​ ​are​ ​about​ ​to​ ​invade​ ​the​ ​ear
 ### From Source
 
 ```shell
-$ make start
+$ make
 // OR
 $ go run main.go
 ```
@@ -58,20 +58,5 @@ $ make test
 
 ```shell
 $ make help
-
- Choose a command run in alien-invasion:
-
-  install            Install missing dependencies. Runs `go get` internally. e.g; make install get=github.com/foo/bar
-  start              Clean, compile and start simulation.
-  start-simulation   Start alian simulation from binary.
-  stop               Stop the simulation.
-  compile            Compile the project.
-  exec               Run given command. e.g; make exec run="go test ./..."
-  clean              Clean build files. Runs `go clean` internally.
-  test               Run all tests.
-  unit               Run all unit tests.
-  fmt                Run `go fmt` for all go files.
-  govet              Run go vet.
-  golint             Run golint.
 ```
 
