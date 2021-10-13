@@ -76,16 +76,14 @@ func (p *Path) hasPath() bool {
 
 // hasMovement verify the city have possible movements.
 func (c *City) hasMovement() bool {
-	if c.North.hasPath() {
+	switch {
+	case c.North.hasPath():
 		return true
-	}
-	if c.South.hasPath() {
+	case c.South.hasPath():
 		return true
-	}
-	if c.West.hasPath() {
+	case c.West.hasPath():
 		return true
-	}
-	if c.East.hasPath() {
+	case c.East.hasPath():
 		return true
 	}
 	return false
